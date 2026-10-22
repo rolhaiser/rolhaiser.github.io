@@ -74,6 +74,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     color: #ffb86c !important;
 }
 
+.c,
+.c1,
+.cm,
+.cp,
+.cs,
+.cpf {
+    color: #ff79c6 !important;
+    font-style: italic;
+}
+
 .s,
 .s1,
 .s2,
@@ -89,12 +99,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     color: #ffb86c !important;
 }
 
+/* Palabras clave: def, for, return, import, as, if... */
 .k,
 .kd,
 .kn,
-.kr,
-.nf,
-.nn,
+.kr {
+    color: #7ee787 !important;
+}
+
+/* Nombre de funciones */
+.nf {
+    color: #ffffff !important;
+}
+
+/* Módulos y alias: numpy, np */
+.nn {
+    color: #ffffff !important;
+}
+
+/* Números */
 .m,
 .mi,
 .mf,
@@ -113,6 +136,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 body {
     background: #121212 !important;
     color: #e0e0e0 !important;
+    font-size: 20px !important;
 }
 
 /* Celdas */
