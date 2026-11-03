@@ -1,128 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Programación</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      text-align: center;
-      margin: 40px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #556B2F; /* verde oliva */
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    a:hover {
-      background-color: #6B8E23;
-    }
-  </style>
-  
-<!-- Agregamos un boton para volver a la pagina principal -->
- <a href="../" class="boton-inicio">
-  🏠 Volver al Inicio
-</a>
-
-<style>
-  .boton-inicio {
-    display: inline-block;
-    font-size: 14px;          /* pequeño */
-    padding: 6px 12px;        /* menos espacio  */
-    background-color: #cccccc; /* gris claro */
-    color: #333;              /* texto gris oscuro */
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: normal;      /* menos énfasis */
-    transition: background 0.3s, color 0.3s;
-    margin-top: 20px;
-  }
-  .boton-inicio:hover {
-    background-color: #999999; /* gris más oscuro al pasar el mouse */
-    color: white;
-  }
-  /* Botón de descarga */
-    .boton {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color:  #0047ab; /* azul cobalto */
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-      margin: 10px auto;
-    }
-    .boton:hover {
-      background-color: #6B8E23;
-    }
-
-img {
-      display: block;
-      margin: 0 auto 20px; /* centrado y espacio debajo */
-      border-radius: 8px;  /* esquinas redondeadas opcional */
-    }
-
-html, body {
-   font-size: 1em;
-   text-align: left;
-   text-decoration: none;
-}
-html { background-color: #c0c0c0;  }
-/*  #645861; #abb8c3   #e7e7e7; #c0c0c0 */
-body {
-   max-width: 40.96em;
-   margin: 5.0em auto;
-   padding: 3em 3em 5em 4em;
-   background-color: white;
-   border: .1em solid #c0c0c0;
-/*       min-width: 780px;*/
-/**    max-width: 1260px; **/
-
-}
-</style>
-<div class="container">
-  <!-- Imagen arriba del título -->
-  <img src="../imagenes/python.png" alt="Logo de Programación" width="200">
-</div>
-
+    <meta charset="UTF-8"> <!--acepta la ñ-->
+    <title>Programación</title> <!--titulo de la pestaña-->
+    <link rel="icon" type="image/png" href="imagenes/icono.png"> <!--icono de pagina-->
+    <link rel="stylesheet" href="estiloprog.css" /> <!-- configuramos con css-->
 </head>
 <body>
-  <h1>Programación</h1>
+    <div class="contenedor"> <!--Titulo-->
+        <img src="imagenes/python.png" alt="Logo de Python" width="200">
+        <h1>Programación con Python</h1>
+    </div>
 
-   <!-- Botón para descargar -->
-    <a href="comandospython.pdf" target="_blank" class="boton">
-      Hoja de confianza
-    </a>
-<div class="guia">
-    <h3>Guía 6 · NumPy</h3>
-    <a href="guia6.html" target="_blank">📄 Abrir guía</a>
-</div>
 
-<div class="guia">
-    <h3>Guía 7 · Interpolacion y Raices</h3>
-    <a href="guia7.html" target="_blank">📄 Abrir guía</a>
-</div>
-  
-<div class="guia">
-    <h3>Guía 8 · Lectura y escritura. Integrales</h3>
-    <a href="guia8.html" target="_blank">📄 Abrir guía</a>
-</div>
+    <div class="destacado">
+    📌 <b>Material de consulta rápida:</b>Resumen de sintaxis permitido.
+    <span style="float:right;"><!-- pongo style para no hacer nueva clase -->
+        <a href="documentos/comandospython.pdf"
+           target="_blank"
+           class="boton_descarga_pdf">
+           Comandos
+        </a>
+    </span>
+    </div>
 
-<div>
+    <article class="guia">
+        <div class="titulo_guia texto">
+            <a href="documentos/guia6.html" target="_blank" class="boton_guia">
+                Guía 6 </a>
+            <h2>Numpy</h2>
+        </div>
+            <p>
+            Operaciones con vectores, generacion de números aleatorios y algebra matricial.
+            </p>
+        <img src="imagenes/numpy.png" class="imagen_guia">
+    </article>
+
+    <article class="guia">
+        <div class="titulo_guia">
+            <a href="documentos/guia7.html" target="_blank" class="boton_guia">
+                Guía 7 </a>
+            <h2> Interpolacion y Raices</h2>
+        </div>
+        <p>
+            Interpolacion lineal, polinomica y con Splines Cubicos.
+            Buscar raices con metodo de biseccion, Newton-Raphson y secante.
+        </p>
+    </div>
+    <img src="imagenes/raiz.png" class="imagen_guia">
+    </article>
+
+
+    <article class="guia">
+        <div class="titulo_guia">
+            <a href="documentos/guia8.html" target="_blank" class="boton_guia">
+                Guía 8 </a>
+            <h2> Lectura y escritura. Integrales</h2>
+        </div>
+        <p>
+            Guardado y lectura de arrays. Metodos de integracion de Trapecio, Simpson y Montecarlo.
+        </p>
+    </div>
+    <img src="imagenes/integral.png" class="imagen_guia">
+    </article>
+
+    
   <h3>Clase lost media: Ecuaciones diferenciales</h3>
   <p>(Para el proyecto final)</p>
-  <a href="clase11_bfil.pdf" target="_blank" class="boton">
+  <a href="documentos/clase11_bfil.pdf" target="_blank" class="boton">
       Clase 11 EDOs
     </a>
 </div>
