@@ -1,0 +1,102 @@
+/*Configuracion de CSS*/
+
+html { background-color: #abb8c3} /*fondo celeste*/
+body { /*hoja A4 en blanco*/
+   max-width: 40.96em;
+   margin: 5.0em auto;
+   padding: 3em 3em 5em 4em;
+   background-color: white;
+   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   border: .1em solid #c0c0c0}
+
+.contenedor { /*configuramos la clase contenedor*/
+    display: flex;
+    align-items: center;
+    gap: 20px /* espacio entre imagen y título*/}
+
+.boton_descarga_pdf{ /*boton para descargar o mostrar pdf*/
+     display: inline-block;
+      padding: 12px 20px;
+      background-color:  #556B2F; /* verde oliva */
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin: 10px auto}
+.boton_descarga_pdf:hover {background-color: #6B8E23} /* verde claro al pasar mouse */
+
+.guia{ /* el recuadro gris, capaz borro nomas*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    background:white; /*#f5f7fa;*/
+    border: 1px solid white; /*#d8dde6;*/
+    border-radius: 12px;
+    gap: 25px}
+    
+.titulo_guia{ /*guia al lado de su titulo*/
+    display: flex;
+    align-items: center;
+    gap: 15px}
+
+.titulo_guia h2{ /*tamaño titulo guia*/
+    margin: 0;
+    font-size: 1.4rem;}
+
+.boton_guia{ /*boton azul para abrir en otra pestaña*/
+    display: inline-block;
+
+    width: 90px;      /* ancho fijo */
+    text-align: center;
+
+    padding: 10px 0;
+
+    background-color: #0047ab;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 6px;
+    transition: background-color 0.3s}
+.boton_guia:hover{background-color: #1770ec}
+
+.guia{
+    display:grid;
+
+    grid-template-columns: auto 1fr 150px;
+    grid-template-rows: auto auto;
+
+    column-gap:15px;
+    row-gap:10px;
+
+    align-items:center;
+}
+
+.guia p{ /*pone descripcion de guia debajo, como matriz*/
+    grid-column:1 / 3;
+    grid-row:2;
+    margin:0;}
+
+.imagen_guia{/*pone imagen fila [1,3)= 1 y 2, columna 3, como matriz*/
+    grid-column:3;
+    grid-row:1 / 3;
+    width:150px;}
+
+.destacado{
+    background: #e7e7e7d9;
+    border-left:5px solid gray;
+    padding:10px 15px;
+    margin:20px 0;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+/*  #645861; #abb8c3   #e7e7e7; #c0c0c0 */
+
+
+    
